@@ -13,7 +13,7 @@ const ghpages = require("justo-plugin-gh-pages");
 catalog.workflow({name: "build", desc: "Create the app."}, function() {
   bootlint("Lint Bootstrap code", {
     src: "app/es/",
-    ignore: "app/es/curso"
+    ignore: "app/es/download"
   });
 
   clean("Clean dist directory", {
