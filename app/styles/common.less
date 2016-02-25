@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+@color: black;
+@background-color: white;
+
+@brand-font-family: "Montserrat", cursive;
+@brand-color: #E56322;
+@h1-color: @brand-color;
+@h2-color: rgb(120, 120, 120);
+
+@body-font-family: "Open Sans", sans-serif;
+@body-font-size: 14px;
+
+@header-font-family: "Montserrat", cursive;
+
+@footer-background-color: #333;
+@footer-font-family: @body-font-family;
+@footer-font-size: 12px;
+
+span.brand {
+  font-family: @brand-font-family;
+  font-size: 15px;
+  color: @brand-color;
+}
+
+.brand-color {
+  color: @brand-color;
+}
+
+span.def {
+  //color: @brand-color;
+  font-weight: bold;
+}
+
+span.object {
+  font-weight: bold;
+}
+
+body {
+  font-family: @body-font-family;
+  font-size: @body-font-size;
+}
+
+nav {
+  background-color: @footer-background-color;
+}
+
+h1 {
+  font-family: @header-font-family;
+  color: @h1-color;
+  font-size: 22px;
+}
+
+h2 {
+  font-family: @header-font-family;
+  color: @h2-color;
+  font-size: 18px;
+}
+
+h3 {
+  font-family: @header-font-family;
+}
+
+div.jumbotron h1, div.jumbotron h2 {
+  color: white;
+  font-weight: bold;
+}
+
+footer {
+  background-color: @footer-background-color;
+  font-family: @footer-font-family;
+  font-size: @footer-font-size;
+  padding: 5px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+article.contact {
+  padding: 10px;
+  background-color: #F8F8F8;
+}
+
+a {
+  color: @brand-color;
+}

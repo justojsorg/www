@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+span.brand {
+  font-family: "Montserrat", cursive;
+  font-size: 15px;
+  color: #E56322;
+}
+.brand-color {
+  color: #E56322;
+}
+span.def {
+  font-weight: bold;
+}
+span.object {
+  font-weight: bold;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+nav {
+  background-color: #333;
+}
+h1 {
+  font-family: "Montserrat", cursive;
+  color: #E56322;
+  font-size: 22px;
+}
+h2 {
+  font-family: "Montserrat", cursive;
+  color: #787878;
+  font-size: 18px;
+}
+h3 {
+  font-family: "Montserrat", cursive;
+}
+div.jumbotron h1,
+div.jumbotron h2 {
+  color: white;
+  font-weight: bold;
+}
+footer {
+  background-color: #333;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+}
+ul {
+  list-style-type: disc;
+}
+article.contact {
+  padding: 10px;
+  background-color: #F8F8F8;
+}
+a {
+  color: #E56322;
+}
+a {
+  color: #E56322;
+}

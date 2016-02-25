@@ -1,0 +1,48 @@
+{
+  "name": "justojs.org",
+  "version": "0.1.0",
+  "description": "The Justo.js website.",
+  "homepage": "http://justojs.org",
+  "author": {
+    "name": "Justo Labs",
+    "email": "justojs@justolabs.com",
+    "url": "http://justojs.org"
+  },
+  "contributors": [
+    {
+      "name": "Raúl G. González",
+      "email": "raulggonzalez@justojs.org",
+      "url": ""
+    }
+  ],
+  "keywords": [
+    "Justo",
+    "Justo.js"
+  ],
+  "bugs": {
+    "url": "",
+    "email": "issues@justojs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 5.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "justo": "*",
+    "justo-plugin-bootlint": "*",
+    "justo-plugin-fs": "*",
+    "justo-plugin-gh-pages": "*",
+    "justo-plugin-less": "*",
+    "justo-plugin-chrome": "*"
+  },
+  "files": [],
+  "scripts": {
+    "test": ""
+  }
+}
