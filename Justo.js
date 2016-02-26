@@ -62,7 +62,7 @@ catalog.workflow({name: "publish", desc: "Publish GitHub Pages."}, function() {
 
   chrome.open("Open Chrome", {
     path: "C:\\Program Files (x86)\\Google\\Chrome\\Application",
-    src: "http://justojsorg.github.io/www.justojs.org/indeex.html",
+    src: "http://justojsorg.github.io/www.justojs.org/index.html",
     newWindow: true
   });
 });
