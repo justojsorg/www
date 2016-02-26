@@ -8,12 +8,20 @@ const lessc = require("justo-plugin-less").compile;
 const bootlint = require("justo-plugin-bootlint");
 const chrome = require("justo-plugin-chrome");
 const ghpages = require("justo-plugin-gh-pages");
+const tidy = require("justo-plugin-tidy");
 
 //catalog
 catalog.workflow({name: "build", desc: "Create the app."}, function() {
   bootlint("Lint Bootstrap code", {
     src: "app/es/",
     ignore: "app/es/download"
+  });
+
+  tidy("Check HTML code", {
+    path: "C:\\opt\\tidy\\bin\\",
+    config: "tidy.conf",
+    src: "app/es/",
+    ignore: "app/es/download/"
   });
 
   clean("Clean dist directory", {
