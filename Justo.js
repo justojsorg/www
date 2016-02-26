@@ -49,7 +49,7 @@ catalog.workflow({name: "build", desc: "Create the app."}, function() {
 catalog.workflow({name: "open", desc: "Open app in Chrome."}, function() {
   chrome.open("Open Chrome", {
     path: "C:\\Program Files (x86)\\Google\\Chrome\\Application",
-    src: path.join(process.cwd(), "dist/es/index.html"),
+    src: path.join(process.cwd(), "dist/index.html"),
     newWindow: true
   });
 });
@@ -62,7 +62,7 @@ catalog.workflow({name: "publish", desc: "Publish GitHub Pages."}, function() {
 
   chrome.open("Open Chrome", {
     path: "C:\\Program Files (x86)\\Google\\Chrome\\Application",
-    src: "http://justojsorg.github.io/www.justojs.org/es/index.html",
+    src: "http://justojsorg.github.io/www.justojs.org/indeex.html",
     newWindow: true
   });
 });
