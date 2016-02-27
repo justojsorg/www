@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <meta name="description" content="Justo.js es una herramienta de automatización o motor de tareas escrita en JavaScript y Node.js.">
+  <meta name="description" content="Justo.js es una herramienta de automatización o motor de tareas escrito en JavaScript y Node.js.">
   <meta name="keywords" content="Automatización, JavaScript, Node.js, Justo, Justo.js, Tareas, Motor de tareas, Ejecutor de tareas">
   <meta name="author" content="Justo Labs">
   <link rel="icon" href="images/favicon.ico">
@@ -20,48 +20,125 @@
 </head>
 
 <body>
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
-        <div class="header clearfix">
-          <h3 class="header-brand">Justo.js <span class="brand-color fa fa-forward"></span></h3>
+  <!-- header -->
+  <header class="navbar navbar-light navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="clearfix">
+        <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#menu">
+          <span class="fa fa-bars"></span>
+        </button>
 
-          <nav>
-            <ul class="nav header-nav">
-              <li><a href="./es/formacion.html"><span class="brand"><span class="fa fa-graduation-cap"></span></span> Formación</a></li>
-              <li><a href="./es/patrocinadores.html"><span class="brand"><span class="fa fa-group"></span></span> Patrocinadores</a></li>
-              <li><a href="./es/prensa.html"><span class="brand"><span class="fa fa-quote-left"></span></span> Prensa</a></li>
-            </ul>
-          </nav>
+        <a class="navbar-brand hidden-sm-up nav-item" href="index.html">
+          <span class="fa fa-home"></span>
+        </a>
+      </div>
+
+      <div id="menu" class="collapse navbar-toggleable-xs">
+        <nav class="nav navbar-nav">
+          <a class="nav-item nav-link active hidden-sm-down" href="./index.html"><span class="fa fa-home"></span></a>
+          <a class="nav-item nav-link" href="./es/caracteristicas.html"><span class="fa fa-product-hunt"></span> Características</a>
+          <a class="nav-item nav-link" href="./es/plugins.html"><span class="fa fa-plug"></span> Plugins</a>
+          <a class="nav-item nav-link" href="./es/formacion.html"><span class="fa fa-graduation-cap"></span> Formación</a>
+          <a class="nav-item nav-link" href="./es/equipo.html"><span class="fa fa-code"></span> Equipo</a>
+          <a class="nav-item nav-link" href="./es/patrocinadores.html"><span class="fa fa-group"></span> Patrocinadores</a>
+          <a class="nav-item nav-link" href="./es/prensa.html"><span class="fa fa-quote-left"></span> Prensa</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="container" role="main">
+    <div class="jumbotron">
+      <div class="row cover">
+        <div class="col-md-6">
+          <img class="img-fluid" src="./images/index.png" alt="Courier goes forward.">
+          <p><span class="brand-white">Justo.js</span> <span class="fa fa-forward brand-color"></span></p>
         </div>
 
-        <div class="cover">
-          <h1 class="slogan">Automatiza<span class="brand-color">.</span> Simplifica<span class="brand-color">.</span> Avanza<span class="brand-color">.</span></h1>
+        <div class="col-md-6">
+          <article class="cover">
+            <h1>Automatiza<span style="color: #333">.</span> Simplifica<span style="color: #333">.</span> Avanza<span style="color: #333">.</span></h1>
 
-          <p>
-            <span class="brand">Justo.js</span> es una herramienta de software que te ayuda a automatizar y simplificar tus actividades, trabajos y procesos en:
-          </p>
+            <p>
+              <span class="brand">Justo.js</span> es una herramienta de automatización sencilla,
+              potente, extensible y fácil de utilizar. Ayuda a automatizar tareas, trabajos,
+              actividades o procesos manuales y repetitivos. Se ha desarrollado en <span class="object">JavaScript</span> y <span class="object">Node.js</span>.
+            </p>
 
-          <ul class="lead">
-            <li><span class="fa fa-check"></span> Construcción de software</li>
-            <li><span class="fa fa-check"></span> Despliegue de aplicaciones</li>
-            <li><span class="fa fa-check"></span> Realización de pruebas de software</li>
-            <li><span class="fa fa-check"></span> Administración y monitorización de sistemas</li>
-            <li><span class="fa fa-check"></span> Extracción, transformación y carga de datos</li>
-            <li>y mucho más.</li>
-          </ul>
-
-          <p class="lead">
-            <a href="./es/caracteristicas.html">Aprender más <span class="fa fa-link"></span></a>
-          </p>
-        </div>
-
-        <div class="footer">
-          <p>Proudly made with <span class="brand">♥</span> in Valencia, Spain, EU.</p>
+            <p>
+              <a href="./es/caracteristicas.html">Más info <span class="fa fa-link"></span></a>
+            </p>
+          </article>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="row advantages">
+      <div class="col-md-6 col-push-md-6">
+        <h1>Usos de la automatización</h1>
+
+        <p>
+          Los principales usos de <span class="brand">Justo.js</span> y de la automatización son:
+        </p>
+      </div>
+
+      <div class="col-md-6 col-pull-md-6">
+        <ul>
+          <li><span class="fa fa-check"></span> Construcción de software.</li>
+          <li><span class="fa fa-check"></span> Despliegue o instalación de software.</li>
+          <li><span class="fa fa-check"></span> Realización de pruebas.</li>
+          <li><span class="fa fa-check"></span> Administración y monitorización de configuración.</li>
+          <li><span class="fa fa-check"></span> Integración contínua.</li>
+          <li><span class="fa fa-check"></span> Realización de empaquetamientos.</li>
+          <li><span class="fa fa-check"></span> Extracción, transformación y carga de datos.</li>
+          <li><span class="fa fa-check"></span> Generación de archivos y/o directorios a partir de plantillas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row uses">
+      <div class="col-md-6">
+        <h1>Ventajas de la automatización</h1>
+
+        <p>
+          Las principales ventajas de <span class="brand">Justo.js</span> y de la automatización son:
+        </p>
+      </div>
+
+      <div class="col-md-6">
+        <ul>
+          <li><span class="fa fa-check"></span> Aumento de la productividad.</li>
+          <li><span class="fa fa-check"></span> Aumento de la calidad.</li>
+          <li><span class="fa fa-check"></span> Aumento de la precisión o exactitud.</li>
+          <li><span class="fa fa-check"></span> Aumento de la robustez.</li>
+          <li><span class="fa fa-check"></span> Reducción de costes.</li>
+          <li><span class="fa fa-check"></span> Reducción de errores.</li>
+          <li><span class="fa fa-check"></span> Reducción de riesgos.</li>
+          <li><span class="fa fa-check"></span> Reducción de tareas manuales.</li>
+          <li><span class="fa fa-check"></span> Reducción de tiempos de ejecución, de operación, de despliegue...</li>
+          <li><span class="fa fa-check"></span> Reducción de mantenimiento.</li>
+          <li><span class="fa fa-check"></span> Reducción de la duplicidad de trabajos.</li>
+          <li><span class="fa fa-check"></span> Reducción de la complejidad.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <p class="more-info">
+          <a class="button button-primary hidden-md-up" href="./es/caracteristicas.html" role="button">Más info <span class="fa fa-link"></span></a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="text-muted" role="contentinfo">
+    <div class="container">
+      Copyright &copy; 2016 Justo Labs. Proudly made with <span class="brand-color">♥</span> in Valencia, Spain, EU.
+    </div>
+  </footer>
 
   <!-- Bootstrap -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

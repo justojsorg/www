@@ -1,159 +1,100 @@
 @import "common.less";
 
-@background-color: black;
-@header-color: rgba(255,255,255,.75);
-@lead-primary-color: white;
-@lead-secondary-color: rgba(255,255,255,.5);
-@menu-color: @lead-secondary-color;
-
-html, body {
-  height: 95%;
-  background-color: @background-color;
+ul {
+  list-style: none;
 }
 
-body {
-  color: #fff;
+@media (min-width: 64px) {
+  ul {
+    padding: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  ul {
+    padding: 25px;
+  }
+}
+
+p.more-info {
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-h1.slogan {
-  color: White;
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 95%; /* For at least Firefox */
-  min-height: 95%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-}
-
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-
-/**
- * Cover
- */
-.cover {
-  // padding: 0 20px;
-}
-
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/**
- * Links
- */
-a, a:hover, a:focus {
-  color: @brand-color;
-  text-decoration: none;
-}
-
-.lead a {
+p.more-info a {
   font-weight: bold;
-  font-size: 16px;
 }
 
 /**
- * List
+ * cover
  */
-ul.lead {
-  list-style-type: none;
-  font-family: @header-font-family;
-  font-size: 16px;
+.jumbotron {
+  background-color: black;
+  vertical-align: middle;
 }
 
-ul.lead li:nth-child(odd) {
-  color: @lead-primary-color;
+div.cover div:first-child p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
-ul.lead li:nth-child(even) {
-  color: @lead-secondary-color;
-}
-
-ul.lead li span {
+article.cover h1 {
+  font-weight: bold;
   color: @brand-color;
 }
 
-/**
- * header
- */
-.header-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
+@media (min-width: 64px) {
+  article.cover h1 {
+    text-align: left;
+  }
 
-.header-nav > li {
-  display: inline-block;
-}
-
-.header-nav > li + li {
-  margin-left: 20px;
-}
-
-.header-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
-  color: white;
-  border-bottom: 2px solid transparent;
+  article.cover p:first-of-type {
+    text-align: left;
+    color: white;
+  }
 }
 
 @media (min-width: 768px) {
-  .header-brand {
-    float: left;
+  article.cover h1 {
+    text-align: center;
   }
 
-  .header-nav {
-    float: right;
+  article.cover p:first-of-type {
+    text-align: justify;
+    color: white;
+  }
+
+  div.cover article {
+    padding: 25px;
   }
 }
 
-/*
- * Footer
- */
-.footer {
-  font-family: @footer-font-family;
-  font-size: @footer-font-size;
+article.cover p:nth-child(odd) {
   text-align: center;
-  color: rgba(255,255,255,.5);
 }
 
-/*
- * Affix and center
+article.cover a {
+  font-weight: bold;
+}
+
+/**
+ * Advantages
  */
-
-@media (min-width: 768px) {
-  .header {
-    position: fixed;
-    top: 0;
-  }
-
-  .footer {
-    position: fixed;
-    bottom: 0;
-  }
-
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-
-  /* Handle the widths */
-  .header, .footer, .cover-container {
-    width: 85%; /* Must be percentage or pixels for horizontal alignment */
-  }
+div.advantages {
+  // background-color: black;
+  margin: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-@media (min-width: 992px) {
-  .header, .footer, .cover-container {
-    width: 70%; // 700px;
-  }
+/**
+ * Uses
+ */
+div.uses {
+  margin: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
