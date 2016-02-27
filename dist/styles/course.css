@@ -57,6 +57,7 @@ a {
   color: #E56322;
   font-family: "Open Sans", sans-serif;
 }
-a {
-  color: #E56322;
+article.card {
+  padding: 10px;
+  background-color: #F8F8F8;
 }
