@@ -5,6 +5,11 @@ span.brand {
   font-size: 15px;
   color: #E56322;
 }
+span.brand-white {
+  font-family: "Montserrat", cursive;
+  font-size: 15px;
+  color: white;
+}
 .brand-color {
   color: #E56322;
 }
