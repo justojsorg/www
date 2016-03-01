@@ -77,16 +77,14 @@
       </div>
     </div>
 
-    <div class="row advantages">
-      <div class="col-md-6 col-push-md-6">
+    <div class="row">
+      <div class="col-md-6">
         <h1>Usos de la automatización</h1>
 
         <p>
           Los principales usos de <span class="brand">Justo.js</span> y de la automatización son:
         </p>
-      </div>
 
-      <div class="col-md-6 col-pull-md-6">
         <ul>
           <li><span class="fa fa-check"></span> Construcción de software.</li>
           <li><span class="fa fa-check"></span> Despliegue o instalación de software.</li>
@@ -98,18 +96,14 @@
           <li><span class="fa fa-check"></span> Generación de archivos y/o directorios a partir de plantillas.</li>
         </ul>
       </div>
-    </div>
 
-    <div class="row uses">
       <div class="col-md-6">
         <h1>Ventajas de la automatización</h1>
 
         <p>
           Las principales ventajas de <span class="brand">Justo.js</span> y de la automatización son:
         </p>
-      </div>
 
-      <div class="col-md-6">
         <ul>
           <li><span class="fa fa-check"></span> Aumento de la productividad.</li>
           <li><span class="fa fa-check"></span> Aumento de la calidad.</li>
@@ -125,6 +119,135 @@
           <li><span class="fa fa-check"></span> Reducción de la complejidad.</li>
         </ul>
       </div>
+    </div>
+
+    <div class="row">
+      <article class="col-md-6 example">
+        <h1>Ejemplo de archivo de tareas</h1>
+
+        <pre>
+//imports
+const justo = require("justo");
+const catalog = justo.catalog;
+const babel = require("justo-plugin-babel");
+const clean = require("justo-plugin-fs").clean;
+const copy = require("justo-plugin-fs").copy;
+const jshint = require("justo-plugin-jshint");
+const publish = require("justo-plugin-npm").publish;
+
+//catalog
+catalog.workflow({name: "build", desc: "Build the package."}, function() {
+  clean("Clean build directory", {
+    dirs: ["build/es5"]
+  });
+
+  jshint("Best practices", {
+    output: true,
+    src: [
+      "index.js",
+      "lib/op.js",
+    ]
+  });
+
+  babel("Transpile", {
+    comments: false,
+    retainLines: true,
+    preset: "es2015",
+    files: [
+      {src: "index.js", dst: "build/es5/"},
+      {src: "lib/", dst: "build/es5/lib/"}
+    ]
+  });
+
+  clean("Clean dist directory", {
+    dirs: ["dist/es5"]
+  });
+
+  copy(
+    "Create package",
+    {
+      src: "build/es5/index.js",
+      dst: "dist/es5/nodejs/justo-plugin-tidy/"
+    },
+    {
+      src: "build/es5/lib/",
+      dst: "dist/es5/nodejs/justo-plugin-tidy/lib"
+    },
+    {
+      src: ["package.json", "README.md"],
+      dst: "dist/es5/nodejs/justo-plugin-tidy/"
+    }
+  );
+});
+
+catalog.macro({name: "test", desc: "Unit test."}, {
+  require: "justo-assert",
+  src: [
+    "test/unit/index.js",
+    "test/unit/lib/"
+  ]
+});
+
+catalog.workflow({name: "publish", desc: "NPM publish."}, function() {
+  publish("Publish in NPM", {
+    who: "justojs",
+    src: "dist/es5/nodejs/justo-plugin-tidy/"
+  });
+});
+
+catalog.macro({name: "default", desc: "Default task."}, ["build", "test"]);
+        </pre>
+      </article>
+
+      <article class="col-md-6 example">
+        <h1>Ejemplo de ejecución de tarea</h1>
+
+        <pre>
+PS C:\Users\me\Projects\Justo.jsp\justo-plugin-zip> justo -l
+Name     Description
+build    Build the package.
+default  Default task.
+publish  NPM publish.
+test     Unit test.
+PS C:\Users\me\Projects\Justo.jsp\justo-plugin-zip> justo default
+
+  default
+  default
+    build
+      V Clean build directory (63 ms)
+      V Best practices (1244 ms)
+      V Transpile (9668 ms)
+      V Clean dist directory (78 ms)
+      V Create package (16 ms)
+    test
+      test/unit/index.js
+        API
+          task
+            V Test function (156 ms)
+      test\unit\lib\op.js
+        #op()
+          op(config)
+            V init(*) (0 ms)
+            V Test function (297 ms)
+            V fin(*) (0 ms)
+          op(config) - with base
+            V init(*) (0 ms)
+            V Test function (15 ms)
+            V fin(*) (0 ms)
+          op(config) - with base, but without src
+            V init(*) (0 ms)
+            V Test function (64 ms)
+            V fin(*) (14 ms)
+          op(config) - with ignore
+            V init(*) (0 ms)
+            V Test function (45 ms)
+            V fin(*) (3 ms)
+
+  OK 18 | Failed 0 | Ignored 0 | Total 18
+
+PS C:\Users\me\Projects\Justo.jsp\justo-plugin-zip>
+        </pre>
+      </article>
     </div>
 
     <div class="row">

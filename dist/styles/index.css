@@ -127,19 +127,3 @@ article.cover p:nth-child(odd) {
 article.cover a {
   font-weight: bold;
 }
-/**
- * Advantages
- */
-div.advantages {
-  margin: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-/**
- * Uses
- */
-div.uses {
-  margin: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
