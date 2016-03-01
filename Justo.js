@@ -14,14 +14,14 @@ const tidy = require("justo-plugin-tidy");
 catalog.workflow({name: "build", desc: "Create the app."}, function() {
   bootlint("Lint Bootstrap code", {
     src: "app/es/",
-    ignore: "app/es/download"
+    ignore: "app/es/fundamentos-de-justo-js/pdf/"
   });
 
   tidy("Check HTML code", {
     path: "C:\\opt\\tidy\\bin\\",
     config: "tidy.conf",
     src: "app/es/",
-    ignore: "app/es/download/"
+    ignore: "app/es/fundamentos-de-justo-js/pdf/"
   });
 
   clean("Clean dist directory", {
