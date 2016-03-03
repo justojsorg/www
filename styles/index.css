@@ -23,9 +23,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
-nav {
-  background-color: #333;
-}
 h1 {
   font-family: "Montserrat", cursive;
   color: #E56322;
@@ -62,10 +59,34 @@ a {
   color: #E56322;
   font-family: "Open Sans", sans-serif;
 }
+/**
+ * nav
+ */
+nav {
+  margin-bottom: 5px;
+}
+@media (min-width: 1px) {
+  nav ul li {
+    padding-top: 5px;
+  }
+}
+@media (min-width: 768px) {
+  nav ul {
+    margin: 5px;
+    padding: 5px;
+  }
+  nav ul li {
+    display: inline;
+    padding-left: 15px;
+  }
+}
+nav .active {
+  color: black;
+}
 ul {
   list-style: none;
 }
-@media (min-width: 64px) {
+@media (min-width: 1px) {
   ul {
     padding: 0px;
   }
@@ -100,7 +121,7 @@ article.cover h1 {
   font-weight: bold;
   color: #E56322;
 }
-@media (min-width: 64px) {
+@media (min-width: 1px) {
   article.cover h1 {
     text-align: left;
   }

@@ -24,33 +24,33 @@
 
 <body>
   <!-- header -->
-  <header class="navbar navbar-light navbar-static-top" role="navigation">
-    <div class="container">
-      <div class="clearfix">
-        <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#menu">
-          <span class="fa fa-bars"></span>
-        </button>
+  <header>
+    <nav class="navbar bg-faded" role="navigation">
+      <div class="container-fluid">
+        <!-- collapsed navbar -->
+        <div class="clearfix">
+          <a class="navbar-brand hidden-md-up nav-item" href="index.html">
+            <span class="fa fa-home"></span>
+          </a>
 
-        <a class="navbar-brand hidden-sm-up nav-item" href="index.html">
-          <span class="fa fa-home"></span>
-        </a>
-      </div>
+          <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+            <span class="fa fa-bars"></span>
+          </button>
+        </div>
 
-      <div id="menu" class="collapse navbar-toggleable-xs">
-        <nav class="nav navbar-nav">
-          <a class="nav-item nav-link active hidden-sm-down" href="./index.html"><span class="fa fa-home"></span></a>
-          <a class="nav-item nav-link" href="./es/caracteristicas.html"><span class="fa fa-product-hunt"></span> Características</a>
-          <a class="nav-item nav-link" href="./es/plugins.html"><span class="fa fa-plug"></span> Plugins</a>
-          <a class="nav-item nav-link" href="./es/formacion.html"><span class="fa fa-book"></span> Documentación</a>
-          <a class="nav-item nav-link" href="./es/equipo.html"><span class="fa fa-code"></span> Equipo</a>
-          <a class="nav-item nav-link" href="./es/patrocinadores.html"><span class="fa fa-group"></span> Patrocinadores</a>
-          <a class="nav-item nav-link" href="./es/prensa.html"><span class="fa fa-quote-left"></span> Prensa</a>
-        </nav>
+        <!-- un-collapsed navbar -->
+          <ul id="menu" class="nav navbar-inline collapse navbar-toggleable-sm">
+            <li class="nav-item"><a class="nav-link active hidden-md-down" href="./index.html"><span class="fa fa-home"></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="./es/caracteristicas.html"><span class="fa fa-product-hunt"></span> Características</a></li>
+            <li class="nav-item"><a class="nav-link" href="./es/plugins.html"><span class="fa fa-plug"></span> Plugins</a></li>
+            <li class="nav-item"><a class="nav-link" href="./es/formacion.html"><span class="fa fa-book"></span> Documentación</a></li>
+            <li class="nav-item"><a class="nav-link" href="./es/equipo.html"><span class="fa fa-code"></span> Equipo</a></li>
+            <li class="nav-item"><a class="nav-link" href="./es/patrocinadores.html"><span class="fa fa-group"></span> Patrocinadores</a></li>
+            <li class="nav-item"><a class="nav-link" href="./es/prensa.html"><span class="fa fa-quote-left"></span> Prensa</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
   </header>
-
-  <hr class="hidden-xs-down">
 
   <!-- main -->
   <main class="container" role="main">
