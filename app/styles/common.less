@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+@xs: 1px;
+@sm: 768px;
+@md: 992px;
+@lg: 1200px;
+
 @color: black;
 @background-color: white;
 
@@ -35,7 +40,6 @@ span.brand-white {
 }
 
 span.def {
-  //color: @brand-color;
   font-weight: bold;
 }
 
@@ -46,10 +50,6 @@ span.object {
 body {
   font-family: @body-font-family;
   font-size: @body-font-size;
-}
-
-nav {
-  background-color: @footer-background-color;
 }
 
 h1 {
@@ -93,4 +93,33 @@ article.contact {
 a {
   color: @brand-color;
   font-family: @body-font-family;
+}
+
+/**
+ * nav
+ */
+nav {
+  margin-bottom: 5px;
+}
+
+@media (min-width: @xs) {
+  nav ul li {
+    padding-top: 5px;
+  }
+}
+
+@media (min-width: @sm) {
+  nav ul {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  nav ul li {
+    display: inline;
+    padding-left: 15px;
+  }
+}
+
+nav .active {
+  color: black;
 }
